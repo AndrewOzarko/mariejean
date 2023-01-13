@@ -34,7 +34,7 @@ Docker
 2. ```mj create <TEMPLATE_NAME> <APP_NAME> --version <APP_VERSION> --force``` - create new php app by template - done
 3. ```mj update mj``` - update mj
 
-```mj create ozarko/mariejean app_name``` - create new php app by template - done
+```mj create ozarko/mariejean app_name```
 
 # templates
 
