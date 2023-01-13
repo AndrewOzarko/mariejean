@@ -53,7 +53,9 @@ Docker
    ```CLIENT_WEB_ADMIN_ID=2``` <br>
    ```CLIENT_WEB_ADMIN_SECRET=```
 5. Done
+<br>
 
+Path to your module App/Modules.
 
 **Commands** <br>
 1. ```php artisan module:make <module_name>``` - generate new module
@@ -64,6 +66,8 @@ Docker
 5. ```php artisan module:make-action <action_name>  <module_name>``` - create new action
 6. ```php artisan module:make-task <tusk_name>  <module_name>``` - create new task
 7. ```php artisan module:make-transformer <transformer_name>  <module_name>``` - create new transformer
+8. ```php artisan module:make-migration <migration_name>  <module_name>``` - create new migration
+9. All commands https://nwidart.com/laravel-modules/v6/advanced-tools/artisan-commands
 
 --------------------------------------------------------------
 *  Get validated data from request, paste it to Actions, get back, transform to json and return.
