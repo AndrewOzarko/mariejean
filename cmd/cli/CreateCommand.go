@@ -164,13 +164,20 @@ func ComposerInstall(packageName string, projectName string) {
 	wg := &sync.WaitGroup{}
 	wg.Add(1)
 	s := spinner.New(spinner.CharSets[12], 100*time.Millisecond)
-	defer log.Println(fmt.Sprintf("%v installed", packageName))
+	isInstalled := true
+
+	defer func() {
+		if isInstalled {
+			log.Println(fmt.Sprintf("%v installed", packageName))
+		}
+	}()
 	s.Start()
 	go func() {
 		defer wg.Done()
 		out, errout, err := cmdExec.Shellout(fmt.Sprintf("cd %v && composer require %v", projectName, packageName))
 		if err != nil {
-			log.Fatalln(err)
+			isInstalled = false
+			log.Println(fmt.Sprintf("\n cann't install %v : %v", packageName, err))
 		}
 		log.Println(out, errout)
 	}()
