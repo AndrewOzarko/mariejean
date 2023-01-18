@@ -73,7 +73,7 @@ Path to your module App/Modules.
 
 Contracts, Criteries, Parents, Tasks, Traits <br>
 
-1. Contracts - contains a lot of contracts with different names, but in every file described empty interface. Every class from the Parents directory implements "ParentContract" and each own Contract.y
+1. Contracts - contains a lot of contracts with different names, but in every file described empty interface. Every class from the Parents directory implements "ParentContract" and each own Contract.
 
 As you can see next code is from Parents/ApiController.php check if $data instance implemented  "EntityContract", and if the condition is true, the data automatically transform the fractal item.
 
